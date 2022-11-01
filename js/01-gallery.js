@@ -6,21 +6,21 @@ console.log(galleryItems);
 const myGallery = document.querySelector(".gallery");
 
 //создаем разметку одной картинки
-function createGalleryMarkup(items) {
+function createGalleryMarkup(items) {  // items это галлерея с картинками galleryItems
   return items.map((item) =>
         `<div class="gallery__item">
-  <a class="gallery__link" href="large-image.jpg">
+  <a class="gallery__link" href="${item.original}">
     <img
       class="gallery__image"
-      src="small-image.jpg"
-      data-source="large-image.jpg"
-      alt="Image description"
+      src="${item.preview}"
+      data-source="${item.original}"
+      alt="${item.description}"
     />
   </a>
 </div>`).join("");
 }
 
-const addGalleryMarkup = createGalleryMarkup(galleryItems);// переменная со всеми картинками
+const addGalleryMarkup = createGalleryMarkup(galleryItems);// переменная со всеми картинками, 
 
 myGallery.innerHTML = addGalleryMarkup; // вставляем все картинки в код HTML
 
