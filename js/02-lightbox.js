@@ -29,24 +29,3 @@ myGallery.innerHTML = addGalleryMarkup; // вставляем все карти�
 
 new SimpleLightbox(".gallery a", {enableKeyboard: true, captionsData: 'alt', captionDelay: 250});
 
-// myGallery.addEventListener("click", onImageClick); // обработчик события на всю галлерею
-
-// function onImageClick(event) {
-
-//   blockStandartAction(event);   // запрет на открытие картинки при клике не по ней
-
-//   if (event.target.nodeName !== "IMG") {   // если не картинка, то выходим
-//     return;
-//   }
-
-//   //закрываем кнопкой клавиатуры
-//   myGallery.addEventListener("keydown", (event) => {
-//     if (event.code === 'Escape') {
-//       instance.close();
-//     }
-//   });
-// }
-// //функция для клику не по картинке
-// function blockStandartAction(event) {
-//   event.preventDefault();
-// }
